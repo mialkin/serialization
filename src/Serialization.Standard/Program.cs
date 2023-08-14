@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using Serialization.Standard.Models;
+using Serialization.Standard.Serializers;
+using Serialization.Standard.Serializers.Interfaces;
 
 var options = new JsonSerializerOptions
 {
@@ -24,16 +26,22 @@ var car = new Car
     }
 };
 
-var serializedWithOptions = JsonSerializer.Serialize(car, options);
-var serializedWithoutOptions = JsonSerializer.Serialize(car);
+IDefaultJsonSerializer defaultJsonSerializer = new DefaultJsonSerializer();
+ICamelCaseJsonSerializer camelCaseJsonSerializer = new CamelCaseJsonSerializer();
 
-Console.WriteLine(serializedWithOptions);
-Console.WriteLine(serializedWithoutOptions);
+var defaultJson = defaultJsonSerializer.Serialize(car);
+var camelCaseJson = camelCaseJsonSerializer.Serialize(car);
+
+var defaultCar = defaultJsonSerializer.Deserialize<Car>(defaultJson);
+var camelCaseCar = camelCaseJsonSerializer.Deserialize<Car>(camelCaseJson);
+
+Console.WriteLine(defaultJson);
+Console.WriteLine(camelCaseJson);
 
 // Output:
 /*
 
-{"make":"Honda","model":"HondaCivic","yearOfProduction":2020,"colors":{"roof":"White","wheels":"Dark grey"}}
 {"Make":"Honda","Model":0,"YearOfProduction":2020,"Colors":{"Roof":"White","Wheels":"Dark grey"}}
+{"make":"Honda","model":0,"yearOfProduction":2020,"colors":{"Roof":"White","Wheels":"Dark grey"}}
 
 */
