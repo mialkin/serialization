@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 
-namespace Serialization.SystemTextJson.Models;
+namespace Serialization.Common.Models;
 
-internal class Car
+public class Car
 {
     public string Make { get; set; }
     public CarModel Model { get; set; }

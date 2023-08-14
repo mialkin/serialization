@@ -1,9 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using Serialization.SystemTextJson.Models;
+using Serialization.Common;
 using Serialization.SystemTextJson.Serializers;
 
-var car = CreateCar();
+var car = CarFactory.Build();
 
 var defaultJsonSerializer = new DefaultJsonSerializer();
 var camelCaseJsonSerializer = new CamelCaseJsonSerializer();
@@ -25,18 +24,3 @@ Output:
 {"make":"Honda","model":"HondaCivic","yearOfProduction":2020,"colors":{"roof":"White","wheels":"Dark grey"}}
 
 */
-
-Car CreateCar()
-{
-    return new Car
-    {
-        Make = "Honda",
-        Model = CarModel.HondaCivic,
-        YearOfProduction = 2020,
-        Colors = new Dictionary<string, string>
-        {
-            { "Roof", "White" },
-            { "Wheels", "Dark grey" }
-        }
-    };
-}
