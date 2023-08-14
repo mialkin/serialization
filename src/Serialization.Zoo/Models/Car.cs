@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 
-namespace Serialization.Standard.Models;
+namespace Serialization.Zoo.Models;
 
-class Car
+internal class Car
 {
     public string Make { get; set; }
     public CarModel Model { get; set; }

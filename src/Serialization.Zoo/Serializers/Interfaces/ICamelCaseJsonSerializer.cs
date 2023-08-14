@@ -1,4 +1,4 @@
-namespace Serialization.Standard.Serializers.Interfaces;
+namespace Serialization.Zoo.Serializers.Interfaces;
 
 public interface ICamelCaseJsonSerializer
 {
