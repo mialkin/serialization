@@ -1,4 +1,4 @@
-namespace Serialization.Zoo.Serializers.Interfaces;
+namespace Serialization.SystemTextJson.Serializers.Interfaces;
 
 public interface IRedisJsonSerializer
 {

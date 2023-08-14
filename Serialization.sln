@@ -7,7 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{D9B7BD2B-B1E8-4D93-A322-25688AECD21F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Serialization.Zoo", "src\Serialization.Zoo\Serialization.Zoo.csproj", "{362FC679-36EA-48FE-BE8F-286CA0B3E4FD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Serialization.SystemTextJson", "src\Serialization.SystemTextJson\Serialization.SystemTextJson.csproj", "{362FC679-36EA-48FE-BE8F-286CA0B3E4FD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

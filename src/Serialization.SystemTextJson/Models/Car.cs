@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Serialization.Zoo.Models;
+namespace Serialization.SystemTextJson.Models;
 
 internal class Car
 {

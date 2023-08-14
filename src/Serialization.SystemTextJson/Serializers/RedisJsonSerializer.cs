@@ -1,8 +1,8 @@
 using System.Text.Json;
 using System.Text.Json.Serialization;
-using Serialization.Zoo.Serializers.Interfaces;
+using Serialization.SystemTextJson.Serializers.Interfaces;
 
-namespace Serialization.Zoo.Serializers;
+namespace Serialization.SystemTextJson.Serializers;
 
 public class RedisJsonSerializer : IRedisJsonSerializer
 {

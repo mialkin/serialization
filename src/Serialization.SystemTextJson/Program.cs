@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using Serialization.Zoo.Models;
-using Serialization.Zoo.Serializers;
+using Serialization.SystemTextJson.Models;
+using Serialization.SystemTextJson.Serializers;
 
 var car = CreateCar();
 
