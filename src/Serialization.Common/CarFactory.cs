@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Serialization.Common.Models;
 
@@ -12,6 +13,7 @@ public abstract class CarFactory
             Make = "Honda",
             Model = CarModel.HondaCivic,
             YearOfProduction = 2020,
+            DateOfProduction = new DateOnly(2020, 11, 2),
             Colors = new Dictionary<string, string>
             {
                 { "Roof", "White" },
