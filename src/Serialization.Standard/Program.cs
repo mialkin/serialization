@@ -14,17 +14,7 @@ var options = new JsonSerializerOptions
     // WriteIndented = true
 };
 
-var car = new Car
-{
-    Make = "Honda",
-    Model = CarModel.HondaCivic,
-    YearOfProduction = 2020,
-    Colors = new Dictionary<string, string>
-    {
-        { "Roof", "White" },
-        { "Wheels", "Dark grey" }
-    }
-};
+var car = CreateCar();
 
 IDefaultJsonSerializer defaultJsonSerializer = new DefaultJsonSerializer();
 ICamelCaseJsonSerializer camelCaseJsonSerializer = new CamelCaseJsonSerializer();
@@ -45,3 +35,19 @@ Console.WriteLine(camelCaseJson);
 {"make":"Honda","model":0,"yearOfProduction":2020,"colors":{"Roof":"White","Wheels":"Dark grey"}}
 
 */
+
+Car CreateCar()
+{
+
+    return new Car
+    {
+        Make = "Honda",
+        Model = CarModel.HondaCivic,
+        YearOfProduction = 2020,
+        Colors = new Dictionary<string, string>
+        {
+            { "Roof", "White" },
+            { "Wheels", "Dark grey" }
+        }
+    };
+}
